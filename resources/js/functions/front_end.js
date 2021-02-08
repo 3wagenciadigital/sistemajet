@@ -20,16 +20,16 @@ $(function(){
             var fcontent = $('[name="fcontent"]').val();
 
             if(fname=='' || femail=='' || fphone=='' || fsubject=='' || fcontent==''){
-                setMessage("Preencha todos os campos do formulário");
+                FRONT.setMessage("Preencha todos os campos do formulário");
                 return false;
             }
             if(fphone.length<15){
-                setMessage("Número do telefone esta incorreto");
+                FRONT.setMessage("Número do telefone esta incorreto");
                 return false;
             }
             
             if(!isValidEmail(femail)){
-                setMessage("E-mail informado não é válido");
+                FRONT.setMessage("E-mail informado não é válido");
                 return false;
             }
 
