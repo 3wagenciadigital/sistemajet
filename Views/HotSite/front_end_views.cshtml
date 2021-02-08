@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Resultado Front End";
+    Layout = "~/Views/Shared/Base/_LayoutBreadCrumbContent.cshtml";
+}
+@section breadcrumbs {
+    <div class="ui container">
+        <div class="ui one column grid stackable middle aligned">
+            <div class="row">
+                <div class="column">
+                    <h1>@ViewBag.Title</h1>
+                    <div class="ui breadcrumb text small">
+                        <a class="section" href="/">Home</a>
+                        <i class="right angle icon divider"></i> 
+                        <a class="section" href="/">@ViewBag.Title</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+  
+
+<div class="ui container margin bottom large page-result">
+    <div class="ui grid">
+        <div class="row one column">            
+            <div class="column">
+                 <div class="ui list">                           
+                    <div class="item"><h3><i class="icon user"></i>  Nome: <span class="fname"></span></h3></div>
+                    <div class="item"><h3><i class="icon envelope"></i> <b>E-mail: <span class="femail"></span></h3></div>
+                    <div class="item"><h3><i class="icon phone"></i> <b>Telefone: <span class="fphone"></span></h3></div>
+                    <div class="item"><h3><i class="icon tag"></i> <b>Assunto: <span class="fsubject"></span></h3></div>
+                    <div class="item"><h3><i class="icon align justify"></i> <b>Mensage: <span class="fcontent"></span></h3></div>
+                    <br><hr>
+                    <div class="item"><a href="/hotsite/front_end" class="ui button positive">Editar</a> <button class="ui button negative btnDelete">Apagar</button></div>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 

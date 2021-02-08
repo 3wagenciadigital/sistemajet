@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "Front End";
+    Layout = "~/Views/Shared/Base/_LayoutBreadCrumbContent.cshtml";
+}
+@section breadcrumbs {
+    <div class="ui container">
+        <div class="ui one column grid stackable middle aligned">
+            <div class="row">
+                <div class="column">
+                    <h1>@ViewBag.Title</h1>
+                    <div class="ui breadcrumb text small">
+                        <a class="section" href="/">Home</a>
+                        <i class="right angle icon divider"></i> 
+                        <a class="section" href="/">@ViewBag.Title</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+  
+
+<div class="ui container margin bottom large page-result">
+    <div class="ui grid">
+        <div class="row two column">
+            <div class="column">
+                <form class="ui large form formMessage">
+                    <div class="ui compact message form-message error">
+                        <p>Mensagem de texto</p>
+                    </div>
+                    <div class="field required">
+                        <div class="ui left  input">                         
+                            <input type="text" name="fname" class="change-input" required='true'  placeholder="Nome">
+                        </div>
+                    </div>
+                     <div class="field required">
+                        <div class="ui left  input">                        
+                            <input type="email" name="femail" class="change-input "  required='true' placeholder="E-mail">
+                        </div>
+                    </div>
+                    <div class="field required">
+                        <div class="ui left  input">                            
+                            <input type="text" name="fphone" class="change-input masked mask_phone" required='true'  placeholder="(99) 99999-9999" data-validate='mobile'>
+                        </div>
+                    </div>
+                    <div class="field required">
+                        <div class="ui left  input">                          
+                            <input type="text" name="fsubject" class="change-input"  required='true' placeholder="Assunto">
+                        </div>
+                    </div>
+                    <div class="field required">
+                        <div class="ui left  input">                           
+                            <textarea type="text" name="fcontent" class="change-input"  required='true' placeholder="Mensagem"></textarea>
+                        </div>
+                    </div>
+                    <div class="ui divider hidden"></div>
+                    <button type="submit" class="ui fluid large submit primary button">
+                        Salvar
+                    </button>                                        
+                </form>
+            </div>
+            <div class="column">
+                 <p>
+                     As informações do formulário ao lado são automaticamente salvas em sessionStorage e apresentadas logo abaixo. Confira:
+                    <br>
+                    <hr>
+                    <b>Nome: <span class="fname"></span></b><br>
+                    <b>E-mail: <span class="femail"></span></b><br>
+                    <b>Telefone: <span class="fphone"></span></b><br>
+                    <b>Assunto: <span class="fsubject"></span></b><br>
+                    <b>Mensage: <span class="fcontent"></span></b><br>
+                 </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 
